@@ -7,7 +7,8 @@
     "jsdom-es6": "browserify -r jsdom -s jsdom -o src/specs/lib/jsdom-es6.js",
     "jsdom-es5": "babel --presets es2015 src/specs/lib/jsdom-es6.js -o src/specs/lib/jsdom.js",
     "jsdom-cleanup": "rimraf src/specs/lib/jsdom-es6.js",
-    "jsdom": "run-s jsdom-es6 jsdom-es5 jsdom-cleanup"
+    "jsdom": "run-s jsdom-es6 jsdom-es5 jsdom-cleanup",
+    "postinstall": "cd src; bower install"
   },
   "author": "",
   "license": "ISC",
